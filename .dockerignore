@@ -1,0 +1,12 @@
+.vscode/
+.pytest_cache/
+.git/
+.gitignore
+__pycache__/
+*.py[cod]
+.venv/
+.coverage
+htmlcov/
+logs/
+tests/tmp*/
+data/

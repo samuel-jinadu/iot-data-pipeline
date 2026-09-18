@@ -1,0 +1,47 @@
+# Logs
+LOGLEVEL: "INFO"
+LOGFILE: "logs/pipeline.log"
+
+# Filesystem
+INPUTDATAPATH: "tests/fixtures/test-happy.json"
+OUTPUTFOLDERPATH: "" # spoof this one with a temp dir
+
+
+#Business decisions
+DIRTY_DATA_THRESHOLD_PCT: 10
+THREE_CHAR_STR: 
+    - "cca3"
+TWO_CHAR_STR:
+    - "cca2"
+POSITIVE_INTEGER:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+MILLI_TIMESTAMP:
+    - timestamp
+DROP_ON_NULL:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+    - timestamp
+
+
+# DDL
+EXTRACT_SCHEMA: "device_id INT, device_name STRING, ip STRING, cca2 STRING, cca3 STRING, cn STRING, latitude DECIMAL(7,3), longitude DECIMAL(7,3), scale STRING, temp INT, humidity INT, battery_level INT, c02_level INT, lcd STRING, timestamp LONG"
+
+# --- Spark & Optimisations - unlikely to be used
+APPNAME: "Pipeline Test"
+SPARK_MASTER: "local[2]"
+SPARK_SQL_SHUFFLE_PARTITIONS: 4
+SPARK_MEMORY_FRACTION: 0.5
+SPARK_DRIVER_MEMORY: 2g
+SPARK_SQL_SESSION_TIMEZONE: UTC
+SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE: dynamic
+SPARK_SERIALIZER: org.apache.spark.serializer.KryoSerializer
+SPARK_SQL_PARQUET_COMPRESSION_CODEC: zstd
+SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: _rescued_data
+CHECK_EXECUTION_PLAN: True

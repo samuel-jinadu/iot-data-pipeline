@@ -1,0 +1,10 @@
+services:
+  iot-pipeline:
+    build:
+      context: .
+      target: prod
+    volumes:
+      - ./yaml:/pyspark-worker/yaml:ro
+      - ./data:/pyspark-worker/data
+      - ./logs:/pyspark-worker/logs
+    command: ["yaml/dev.yaml"]

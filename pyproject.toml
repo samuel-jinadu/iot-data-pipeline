@@ -1,0 +1,55 @@
+[project]
+name = "iot-pipeline"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pyspark>=4.2.0",
+    "pyyaml>=6.0.3",
+    "delta-spark>=4.0.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["iot_pipeline"]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+    "chispa>=0.12.0",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.8",
+]
+test = [
+    
+]
+
+[project.scripts]
+iot-pipeline = "iot_pipeline.main:main"
+
+[tool.pytest.ini_options]
+minversion = "9.0"
+testpaths = ["tests"]
+addopts = "--cov=iot_pipeline --cov-report=term-missing --cov-fail-under=80"
+markers = [
+    "integration: marks tests that use a real spark session, read/write to disk or run end-to-end",
+]
+
+[tool.coverage.run]
+source = ["iot_pipeline"]
+omit = [
+    "tests/*", 
+    "*/tests/*",
+    "iot_pipeline/__main__.py", 
+    "iot_pipeline/main.py",
+    "iot_pipeline/logs.py",       # logging boilerplate
+    "iot_pipeline/session.py"    # SparkSession.builder chain
+    ]
+
+[tool.coverage.report]
+exclude_lines = [
+    "def validate_config" # single source of truth
+]

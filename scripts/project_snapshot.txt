@@ -1,0 +1,2204 @@
+[DIR]  .
+--- ./.gitignore ---
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# uv cache
+.uv/
+uv-cache/
+
+# Packaging / build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# Test / coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+
+# Linters / type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+.pyre/
+.pyright/
+
+# Spark / Delta generated files
+spark-warehouse/
+metastore_db/
+derby.log
+*.delta/
+**/_delta_log/
+*.crc
+
+# Generated data / logs
+data/output/
+data/bronze/
+data/silver/
+data/gold/
+logs/*
+!logs/.gitkeep
+*.log
+*.log.*
+
+# Test temporary directories created by tests
+tests/tmp*/
+tests/**/tmp*/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local environment files
+.env
+.env.*
+!.env.example--- ./NOTICE ---
+This project includes test data derived from:
+Learning Spark: Lightning-Fast Data Analytics [2nd Edition]
+https://github.com/databricks/LearningSparkV2
+Licensed under the Apache License, Version 2.0.
+The data has been modified/truncated for testing purposes.
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.--- ./Dockerfile ---
+FROM spark:4.2.0-scala2.13-java21-ubuntu AS builder
+
+USER root
+
+RUN set -ex; \
+    apt-get update; \
+    apt-get install -y python3 python3-pip; \
+    rm -rf /var/lib/apt/lists/*
+
+COPY --from=docker.io/astral/uv:latest /uv /uvx /bin/
+
+WORKDIR /pyspark-worker
+COPY pyproject.toml uv.lock ./
+
+# ---- Test stage ----
+FROM builder AS test
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --locked --no-dev --no-install-project
+COPY . .
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --locked
+
+
+# ---- Prod stage ----
+FROM builder AS prod
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --locked --no-dev --no-install-project
+COPY iot_pipeline ./iot_pipeline
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --locked --no-dev \
+ && mkdir -p logs data/output \
+ && chown -R spark:spark /pyspark-worker
+
+ENV PYSPARK_PYTHON=/pyspark-worker/.venv/bin/python
+ENV PYSPARK_DRIVER_PYTHON=/pyspark-worker/.venv/bin/python
+USER spark
+ENTRYPOINT ["uv", "run", "--frozen", "--no-sync", "iot_pipeline"]--- ./compose.yaml ---
+services:
+  iot-pipeline:
+    build:
+      context: .
+      target: prod
+    volumes:
+      - ./yaml:/pyspark-worker/yaml:ro
+      - ./data:/pyspark-worker/data
+      - ./logs:/pyspark-worker/logs
+    command: ["yaml/dev.yaml"]--- ./pyproject.toml ---
+[project]
+name = "iot-pipeline"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pyspark>=4.2.0",
+    "pyyaml>=6.0.3",
+    "delta-spark>=4.0.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["iot_pipeline"]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+    "chispa>=0.12.0",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.8",
+]
+test = [
+    
+]
+
+[project.scripts]
+iot-pipeline = "iot_pipeline.main:main"
+
+[tool.pytest.ini_options]
+minversion = "9.0"
+testpaths = ["tests"]
+addopts = "--cov=iot_pipeline --cov-report=term-missing --cov-fail-under=80"
+markers = [
+    "integration: marks tests that use a real spark session, read/write to disk or run end-to-end",
+]
+
+[tool.coverage.run]
+source = ["iot_pipeline"]
+omit = [
+    "tests/*", 
+    "*/tests/*",
+    "iot_pipeline/__main__.py", 
+    "iot_pipeline/main.py",
+    "iot_pipeline/logs.py",       # logging boilerplate
+    "iot_pipeline/session.py"    # SparkSession.builder chain
+    ]
+
+[tool.coverage.report]
+exclude_lines = [
+    "def validate_config" # single source of truth
+]--- ./.dockerignore ---
+.vscode/
+.pytest_cache/
+.git/
+.gitignore
+__pycache__/
+*.py[cod]
+.venv/
+.coverage
+htmlcov/
+logs/
+tests/tmp*/
+data/[DIR]  ./.github
+[DIR]  ./.github/workflows
+--- ./.github/workflows/ci.yml ---
+name: IoT Pipeline CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+        - { uses: actions/checkout@v4 }
+        - { name: Set up Docker Buildx, uses: docker/setup-buildx-action@v3 }
+        - { 
+            name: Build test image,
+            uses: docker/build-push-action@v6,
+            with: { context: ".", target: test, load: true, tags: iot-pipeline:test, cache-from: "type=gha,scope=iot-test", cache-to: "type=gha,mode=max,scope=iot-test" }
+            }
+        - { name: Formatter, run: "docker run --rm iot-pipeline:test uv run black --check ." }
+        - { name: Lint, run: "docker run --rm iot-pipeline:test uv run ruff check" }
+        - { name: Tests, run: "docker run --rm iot-pipeline:test uv run pytest" }
+        - { 
+            name: Build prod image,
+            uses: docker/build-push-action@v6,
+            with: { context: ".", target: prod, push: false, tags: iot-pipeline:prod, cache-from: "type=gha,scope=iot-prod", cache-to: "type=gha,mode=max,scope=iot-prod" }
+            }[DIR]  ./tests
+--- ./tests/test_etl.py ---
+from decimal import Decimal
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import MagicMock
+
+import pytest
+from chispa import assert_df_equality
+from conftest import FakePy4JJavaError
+from py4j.protocol import Py4JJavaError
+from pyspark.sql.types import *
+from pyspark.sql.utils import AnalysisException, ParseException
+
+from iot_pipeline.config import CleanConfig, _Config
+from iot_pipeline.etl import clean, extract, save_bronze, save_gold, save_silver
+
+
+@pytest.mark.integration
+def test_extract_happy_path(spark_fixture):
+
+    data = [
+        {
+            "device_id": 1,
+            "device_name": "meter-gauge-1xbYRYcj",
+            "ip": "68.161.225.1",
+            "cca2": "US",
+            "cca3": "USA",
+            "cn": "United States",
+            "latitude": Decimal("38.000000"),
+            "longitude": Decimal("-97.000000"),
+            "scale": "Celsius",
+            "temp": 34,
+            "humidity": 51,
+            "battery_level": 8,
+            "c02_level": 868,
+            "lcd": "green",
+            "timestamp": 1458444054093,
+        },
+        {
+            "device_id": 2,
+            "device_name": "sensor-pad-2n2Pea",
+            "ip": "213.161.254.1",
+            "cca2": "NO",
+            "cca3": "NOR",
+            "cn": "Norway",
+            "latitude": Decimal("62.470000"),
+            "longitude": Decimal("6.150000"),
+            "scale": "Celsius",
+            "temp": 11,
+            "humidity": 70,
+            "battery_level": 7,
+            "c02_level": 1473,
+            "lcd": "red",
+            "timestamp": 1458444054119,
+        },
+        {
+            "device_id": 3,
+            "device_name": "device-mac-36TWSKiT",
+            "ip": "88.36.5.1",
+            "cca2": "IT",
+            "cca3": "ITA",
+            "cn": "Italy",
+            "latitude": Decimal("42.830000"),
+            "longitude": Decimal("12.830000"),
+            "scale": "Celsius",
+            "temp": 19,
+            "humidity": 44,
+            "battery_level": 2,
+            "c02_level": 1556,
+            "lcd": "red",
+            "timestamp": 1458444054120,
+        },
+    ]
+
+    expected_schema = StructType(
+        [
+            StructField("device_id", IntegerType(), True),
+            StructField("device_name", StringType(), True),
+            StructField("ip", StringType(), True),
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("cn", StringType(), True),
+            StructField("latitude", DecimalType(7, 3), True),
+            StructField("longitude", DecimalType(7, 3), True),
+            StructField("scale", StringType(), True),
+            StructField("temp", IntegerType(), True),
+            StructField("humidity", IntegerType(), True),
+            StructField("battery_level", IntegerType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("lcd", StringType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    expected_df = spark_fixture.createDataFrame(data, schema=expected_schema)
+
+    input_schema = "device_id INT, device_name STRING, ip STRING, cca2 STRING, cca3 STRING, cn STRING, latitude DECIMAL(7,3), longitude DECIMAL(7,3), scale STRING, temp INT, humidity INT, battery_level INT, c02_level INT, lcd STRING, timestamp LONG"
+
+    actual_df = extract(spark_fixture, "tests/fixtures/test-happy.json", input_schema)
+
+    assert_df_equality(actual_df, expected_df, ignore_nullable=True)
+
+
+@pytest.mark.integration
+def test_extract_analysis_exception(spark_fixture):
+    input_schema = "xxx"
+
+    with pytest.raises(AnalysisException):
+        extract(spark_fixture, "tests/fixtures/test-happy.json", input_schema)
+
+
+def test_extract_java_error():
+
+    mock_reader = MagicMock()
+    mock_reader.format.return_value = mock_reader
+    mock_reader.schema.return_value = mock_reader
+    mock_reader.option.return_value = mock_reader
+    mock_reader.load.side_effect = FakePy4JJavaError
+
+    mock_spark = MagicMock()
+    mock_spark.read = mock_reader
+
+    with pytest.raises(Py4JJavaError):
+        extract(mock_spark, "/tmp/data.json", "id INT")
+
+
+@pytest.mark.integration
+def test_clean(spark_fixture):
+    data = [("Something", "AnotherThing"), ("Something", None)]
+    input = spark_fixture.createDataFrame(data, ["col1", "col2"])
+    actual = clean(
+        input, CleanConfig(_Config({"EXTRACT_SCHEMA": "", "DROP_ON_NULL": ["col2"]}))
+    )
+    expected = spark_fixture.createDataFrame(
+        [("Something", "AnotherThing")], ["col1", "col2"]
+    )
+    assert_df_equality(actual, expected)
+
+
+# writing to disk tests
+
+
+@pytest.mark.integration
+def test_save_bronze_happy_path(spark_fixture):
+    data = [("Something", "AnotherThing"), ("Something", "YestAnotherThing")]
+    input = spark_fixture.createDataFrame(data, ["col1", "col2"])
+
+    with TemporaryDirectory(dir="tests") as tmpdir:
+        save_bronze(input, "happy_bronze_test.json", tmpdir)
+        actual = spark_fixture.read.format("delta").load(
+            str(Path(tmpdir) / "bronze" / "happy_bronze_test.delta")
+        )
+        assert_df_equality(actual, input)
+
+
+@pytest.mark.integration
+def test_save_silver_happy_path(spark_fixture):
+    data = [("Something", "AnotherThing"), ("Something", "YestAnotherThing")]
+    input = spark_fixture.createDataFrame(data, ["col1", "col2"])
+
+    with TemporaryDirectory(dir="tests") as tmpdir:
+        save_silver(input, "happy_silver_test.json", tmpdir)
+        actual = spark_fixture.read.format("delta").load(
+            str(Path(tmpdir) / "silver" / "happy_silver_test.delta")
+        )
+        assert_df_equality(actual, input)
+
+
+@pytest.mark.integration
+def test_save_gold_happy_path(spark_fixture):
+    data = [("Something", "AnotherThing"), ("Something", "YestAnotherThing")]
+    input = spark_fixture.createDataFrame(data, ["col1", "col2"])
+
+    with TemporaryDirectory(dir="tests") as tmpdir:
+        save_gold(input, input, input, tmpdir, "happy_gold_test")
+        actual = spark_fixture.read.format("delta").load(
+            str(Path(tmpdir) / "gold" / "happy_gold_test.delta")
+        )
+        assert_df_equality(actual, input)
+
+
+# analysis or parse exception paths
+
+
+@pytest.mark.integration
+def test_save_bronze_analysis_parse_exception(spark_fixture):
+    data = [("Something", "AnotherThing"), ("Something", "YestAnotherThing")]
+    input = spark_fixture.createDataFrame(data, ["col1", "col2"])
+
+    with pytest.raises((AnalysisException, ParseException)):
+        input = input.select("None_existing_col")
+        save_bronze(input, "in", "out")
+
+
+@pytest.mark.integration
+def test_save_silver_analysis_parse_exception(spark_fixture):
+    data = [
+        ("Something", "AnotherThing"),
+        ("Something", "YestAnotherThing"),
+    ]
+    input_df = spark_fixture.createDataFrame(data, ["col1", "col2"])
+
+    with pytest.raises((AnalysisException, ParseException)):
+        bad_df = input_df.select("None_existing_col")
+        save_silver(bad_df, "in", "out")
+
+
+@pytest.mark.integration
+def test_save_gold_analysis_parse_exception(spark_fixture):
+    data = [
+        ("Something", "AnotherThing"),
+        ("Something", "YestAnotherThing"),
+    ]
+    analysis_df = spark_fixture.createDataFrame(data, ["col1", "col2"])
+    raw_df = spark_fixture.createDataFrame(data, ["col1", "col2"])
+    quality_df = spark_fixture.createDataFrame(data, ["col1", "col2"])
+
+    with pytest.raises((AnalysisException, ParseException)):
+        bad_df = analysis_df.select("None_existing_col")
+        save_gold(bad_df, raw_df, quality_df, "out", "my_analysis")
+
+
+# java errors
+def test_save_bronze_java_error():
+
+    mock_writer = MagicMock()
+    mock_writer.format.return_value = mock_writer
+    mock_writer.mode.return_value = mock_writer
+    mock_writer.save.side_effect = FakePy4JJavaError
+
+    mock_df = MagicMock()
+    mock_df.write = mock_writer
+    mock_df.count.return_value = 1
+
+    with pytest.raises(Py4JJavaError):
+        save_bronze(mock_df, "", "")
+
+
+def test_save_silver_java_error():
+
+    mock_writer = MagicMock()
+    mock_writer.format.return_value = mock_writer
+    mock_writer.mode.return_value = mock_writer
+    mock_writer.save.side_effect = FakePy4JJavaError
+
+    mock_df = MagicMock()
+    mock_df.write = mock_writer
+    mock_df.count.return_value = 1
+
+    with pytest.raises(Py4JJavaError):
+        save_silver(mock_df, "", "")
+
+
+def test_save_gold_java_error():
+
+    mock_writer = MagicMock()
+    mock_writer.format.return_value = mock_writer
+    mock_writer.mode.return_value = mock_writer
+    mock_writer.save.side_effect = FakePy4JJavaError
+
+    mock_df = MagicMock()
+    mock_df.write = mock_writer
+    mock_df.count.return_value = 1
+
+    with pytest.raises(Py4JJavaError):
+        save_gold(mock_df, mock_df, mock_df, "", "")
+--- ./tests/conftest.py ---
+from unittest.mock import MagicMock
+
+import pytest
+from delta import configure_spark_with_delta_pip
+from py4j.protocol import Py4JJavaError
+from pyspark.sql import SparkSession
+
+
+@pytest.fixture(scope="session")
+def spark_fixture():
+    spark = (
+        SparkSession.builder.master("local[1]")
+        .appName("Testing")
+        .config(
+            "spark.sql.shuffle.partitions", "1"
+        )  # Default is 200; 1 is plenty for test data
+        .config("spark.ui.enabled", "false")  # Disable web UI tracking
+        .config(
+            "spark.sql.execution.arrow.pyspark.enabled", "true"
+        )  # Force fast Arrow serialization
+        # delta stuff
+        .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
+        .config(
+            "spark.sql.catalog.spark_catalog",
+            "org.apache.spark.sql.delta.catalog.DeltaCatalog",
+        )
+    )
+    spark = configure_spark_with_delta_pip(spark).getOrCreate()
+    yield spark
+    spark.stop()
+
+
+class FakePy4JJavaError(Py4JJavaError):
+    """Concrete Py4JJavaError we can actually `raise` in tests.
+
+    Py4JJavaError.__init__ expects a real java_exception with a .stackTrace,
+    so we skip it and initialise it as a plain Exception instead.
+
+    We still need to be safe to `str()` because PySpark's log formatter calls
+    str(exc_value) on the exception record.
+    """
+
+    def __init__(self, msg: str = "fake java error"):
+        Exception.__init__(self, msg)
+        self._msg = msg
+        # Dummy so Py4JJavaError.__str__ (if ever reached) doesn't blow up.
+        self.java_exception = MagicMock()
+        self.java_exception._gateway_client = MagicMock()
+        self.java_exception.stackTrace = []
+
+    def __str__(self) -> str:
+        return self._msg
+
+    def __repr__(self) -> str:
+        return f"FakePy4JJavaError({self._msg!r})"
+--- ./tests/test_pipeline.py ---
+from tempfile import TemporaryDirectory
+
+import pytest
+
+from iot_pipeline.config import _Config
+from iot_pipeline.pipeline import run_pipeline
+
+
+@pytest.mark.integration
+def test_pipeline_happy_path(spark_fixture):
+    with TemporaryDirectory(dir="tests") as tmpdir:
+        config = _Config(
+            {
+                "INPUTDATAPATH": "tests/fixtures/test-happy.json",
+                "OUTPUTFOLDERPATH": tmpdir,
+                "EXTRACT_SCHEMA": "device_id INT, device_name STRING, ip STRING, cca2 STRING, cca3 STRING, cn STRING, latitude DECIMAL(7,3), longitude DECIMAL(7,3), scale STRING, temp INT, humidity INT, battery_level INT, c02_level INT, lcd STRING, timestamp LONG",
+            }
+        )
+        assert run_pipeline(spark_fixture, config) == spark_fixture
+--- ./tests/test_config.py ---
+import pytest
+
+from iot_pipeline.config import get_config
+from iot_pipeline.exceptions import (
+    ConfigurationValidationException,
+    MissingConfigurationKeyNoReasonableDefaultException,
+)
+
+
+# happy path
+def test_get_config():
+    config = get_config("tests/fixtures/test-happy.yaml")
+    assert config.APPNAME == "Test"
+
+
+# sad path
+def test_get_config_failure_missing_key():
+    with pytest.raises(MissingConfigurationKeyNoReasonableDefaultException):
+        get_config("tests/fixtures/test-sad.yaml")
+
+
+def test_get_config_failure_invalid_config_value():
+    with pytest.raises(ConfigurationValidationException):
+        get_config("tests/fixtures/test-nonesense.yaml")
+[DIR]  ./tests/fixtures
+--- ./tests/fixtures/test-sad.yaml ---
+# Logs
+LOGLEVEL: "INFO"
+LOGFILE: "logs/pipeline.log"
+
+# Filesystem
+INPUTDATAPATH: "data/iot_devices.json"
+OUTPUTFOLDERPATH: "data/output"
+
+
+#Business decisions
+DIRTY_DATA_THRESHOLD_PCT: 10
+THREE_CHAR_STR: 
+    - "cca3"
+TWO_CHAR_STR:
+    - "cca2"
+POSITIVE_INTEGER:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+MILLI_TIMESTAMP:
+    - timestamp
+DROP_ON_NULL:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+    - timestamp
+
+
+# missing DDL
+
+
+# --- Spark & Optimisations
+APPNAME: "Test"
+SPARK_MASTER: "local[2]"
+SPARK_SQL_SHUFFLE_PARTITIONS: 4
+SPARK_MEMORY_FRACTION: 0.5
+SPARK_DRIVER_MEMORY: 2g
+SPARK_SQL_SESSION_TIMEZONE: UTC
+SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE: dynamic
+SPARK_SERIALIZER: org.apache.spark.serializer.KryoSerializer
+SPARK_SQL_PARQUET_COMPRESSION_CODEC: zstd
+SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: _rescued_data
+CHECK_EXECUTION_PLAN: True--- ./tests/fixtures/test-happy.json ---
+{"device_id": 1, "device_name": "meter-gauge-1xbYRYcj", "ip": "68.161.225.1", "cca2": "US", "cca3": "USA", "cn": "United States", "latitude": 38.000000, "longitude": -97.000000, "scale": "Celsius", "temp": 34, "humidity": 51, "battery_level": 8, "c02_level": 868, "lcd": "green", "timestamp" :1458444054093 }
+{"device_id": 2, "device_name": "sensor-pad-2n2Pea", "ip": "213.161.254.1", "cca2": "NO", "cca3": "NOR", "cn": "Norway", "latitude": 62.470000, "longitude": 6.150000, "scale": "Celsius", "temp": 11, "humidity": 70, "battery_level": 7, "c02_level": 1473, "lcd": "red", "timestamp" :1458444054119 }
+{"device_id": 3, "device_name": "device-mac-36TWSKiT", "ip": "88.36.5.1", "cca2": "IT", "cca3": "ITA", "cn": "Italy", "latitude": 42.830000, "longitude": 12.830000, "scale": "Celsius", "temp": 19, "humidity": 44, "battery_level": 2, "c02_level": 1556, "lcd": "red", "timestamp" :1458444054120 }--- ./tests/fixtures/test-happy.yaml ---
+# Logs
+LOGLEVEL: "INFO"
+LOGFILE: "logs/pipeline.log"
+
+# Filesystem
+INPUTDATAPATH: "data/iot_devices.json"
+OUTPUTFOLDERPATH: "data/output"
+
+
+#Business decisions
+DIRTY_DATA_THRESHOLD_PCT: 10
+THREE_CHAR_STR: 
+    - "cca3"
+TWO_CHAR_STR:
+    - "cca2"
+POSITIVE_INTEGER:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+MILLI_TIMESTAMP:
+    - timestamp
+DROP_ON_NULL:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+    - timestamp
+
+
+# DDL
+EXTRACT_SCHEMA: "device_id INT, device_name STRING, ip STRING, cca2 STRING, cca3 STRING, cn STRING, latitude DECIMAL(7,3), longitude DECIMAL(7,3), scale STRING, temp INT, humidity INT, battery_level INT, c02_level INT, lcd STRING, timestamp LONG"
+
+# --- Spark & Optimisations
+APPNAME: "Test"
+SPARK_MASTER: "local[2]"
+SPARK_SQL_SHUFFLE_PARTITIONS: 4
+SPARK_MEMORY_FRACTION: 0.5
+SPARK_DRIVER_MEMORY: 2g
+SPARK_SQL_SESSION_TIMEZONE: UTC
+SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE: dynamic
+SPARK_SERIALIZER: org.apache.spark.serializer.KryoSerializer
+SPARK_SQL_PARQUET_COMPRESSION_CODEC: zstd
+SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: _rescued_data
+CHECK_EXECUTION_PLAN: True--- ./tests/fixtures/test-pipeline-happy.yaml ---
+# Logs
+LOGLEVEL: "INFO"
+LOGFILE: "logs/pipeline.log"
+
+# Filesystem
+INPUTDATAPATH: "tests/fixtures/test-happy.json"
+OUTPUTFOLDERPATH: "" # spoof this one with a temp dir
+
+
+#Business decisions
+DIRTY_DATA_THRESHOLD_PCT: 10
+THREE_CHAR_STR: 
+    - "cca3"
+TWO_CHAR_STR:
+    - "cca2"
+POSITIVE_INTEGER:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+MILLI_TIMESTAMP:
+    - timestamp
+DROP_ON_NULL:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+    - timestamp
+
+
+# DDL
+EXTRACT_SCHEMA: "device_id INT, device_name STRING, ip STRING, cca2 STRING, cca3 STRING, cn STRING, latitude DECIMAL(7,3), longitude DECIMAL(7,3), scale STRING, temp INT, humidity INT, battery_level INT, c02_level INT, lcd STRING, timestamp LONG"
+
+# --- Spark & Optimisations - unlikely to be used
+APPNAME: "Pipeline Test"
+SPARK_MASTER: "local[2]"
+SPARK_SQL_SHUFFLE_PARTITIONS: 4
+SPARK_MEMORY_FRACTION: 0.5
+SPARK_DRIVER_MEMORY: 2g
+SPARK_SQL_SESSION_TIMEZONE: UTC
+SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE: dynamic
+SPARK_SERIALIZER: org.apache.spark.serializer.KryoSerializer
+SPARK_SQL_PARQUET_COMPRESSION_CODEC: zstd
+SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: _rescued_data
+CHECK_EXECUTION_PLAN: True--- ./tests/fixtures/test-nonesense.yaml ---
+# Logs
+LOGLEVEL: "DEMONIC"
+LOGFILE: "logs/pipeline.log"
+
+# Filesystem
+INPUTDATAPATH: "data/iot_devices.json"
+OUTPUTFOLDERPATH: "data/output"
+
+
+#Business decisions
+DIRTY_DATA_THRESHOLD_PCT: 10
+THREE_CHAR_STR: 
+    - "cca3"
+TWO_CHAR_STR:
+    - "cca2"
+POSITIVE_INTEGER:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+MILLI_TIMESTAMP:
+    - timestamp
+DROP_ON_NULL:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+    - timestamp
+
+
+# DDL
+EXTRACT_SCHEMA: "device_id INT, device_name STRING, ip STRING, cca2 STRING, cca3 STRING, cn STRING, latitude DECIMAL(7,3), longitude DECIMAL(7,3), scale STRING, temp INT, humidity INT, battery_level INT, c02_level INT, lcd STRING, timestamp LONG"
+
+# --- Spark & Optimisations
+APPNAME: "Test"
+SPARK_MASTER: "local[2]"
+SPARK_SQL_SHUFFLE_PARTITIONS: 4
+SPARK_MEMORY_FRACTION: 0.5
+SPARK_DRIVER_MEMORY: 2g
+SPARK_SQL_SESSION_TIMEZONE: UTC
+SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE: dynamic
+SPARK_SERIALIZER: org.apache.spark.serializer.KryoSerializer
+SPARK_SQL_PARQUET_COMPRESSION_CODEC: zstd
+SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: _rescued_data
+CHECK_EXECUTION_PLAN: True[DIR]  ./tests/tmpugp5w2fn
+[DIR]  ./tests/tmpugp5w2fn/bronze
+[DIR]  ./tests/tmpugp5w2fn/bronze/happy_bronze_test.delta
+--- ./tests/tmpugp5w2fn/bronze/happy_bronze_test.delta/.part-00000-3e2bfe7b-6292-4174-a18c-36ba19f9dd74-c000.snappy.parquet.crc ---
+crc    à§=14`[DIR]  ./tests/tmpugp5w2fn/bronze/happy_bronze_test.delta/_delta_log
+--- ./tests/tmpugp5w2fn/bronze/happy_bronze_test.delta/_delta_log/00000000000000000000.json ---
+{"commitInfo":{"timestamp":1789688124434,"operation":"WRITE","operationParameters":{"mode":"Overwrite","partitionBy":"[]"},"isolationLevel":"Serializable","isBlindAppend":false,"operationMetrics":{"numFiles":"1","numRemovedFiles":"0","numRemovedBytes":"0","numOutputRows":"2","numOutputBytes":"845"},"engineInfo":"Apache-Spark/4.2.0 Delta-Lake/4.4.0","txnId":"1786e685-29b3-45f5-9b06-3e5cf293b15d"}}
+{"metaData":{"id":"d8d29a6d-ae1a-4c65-9643-c98f9d5be235","format":{"provider":"parquet","options":{}},"schemaString":"{\"type\":\"struct\",\"fields\":[{\"name\":\"col1\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"col2\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}","partitionColumns":[],"configuration":{},"createdTime":1789688104854}}
+{"protocol":{"minReaderVersion":1,"minWriterVersion":2}}
+{"add":{"path":"part-00000-3e2bfe7b-6292-4174-a18c-36ba19f9dd74-c000.snappy.parquet","partitionValues":{},"size":845,"modificationTime":1789688111977,"dataChange":true,"stats":"{\"numRecords\":2,\"minValues\":{\"col1\":\"Something\",\"col2\":\"AnotherThing\"},\"maxValues\":{\"col1\":\"Something\",\"col2\":\"YestAnotherThing\"},\"nullCount\":{\"col1\":0,\"col2\":0}}"}}
+--- ./tests/tmpugp5w2fn/bronze/happy_bronze_test.delta/_delta_log/.00000000000000000000.json.crc ---
+crc    æfn—Å|¡a%Ýæ[DIR]  ./tests/tmpugp5w2fn/bronze/happy_bronze_test.delta/_delta_log/_staged_commits
+--- ./tests/test_analysis.py ---
+import pytest
+from chispa import assert_df_equality
+from pyspark.sql import SparkSession
+
+from iot_pipeline.analysis import devices_per_country
+
+
+@pytest.mark.integration
+def test_devices_per_country(spark_fixture: SparkSession):
+    input = [("United States",), ("United States",), ("United States",)]
+    output = [("United States", 3)]
+    expected = spark_fixture.createDataFrame(output, ["cn", "total_number_of_devices"])
+    input = spark_fixture.createDataFrame(input, ["cn"])
+    actual = devices_per_country(input)
+    assert_df_equality(actual, expected, ignore_nullable=True)
+--- ./tests/test_quality.py ---
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import MagicMock
+
+import pytest
+from chispa import assert_df_equality
+from conftest import FakePy4JJavaError
+from py4j.protocol import Py4JJavaError
+from pyspark.sql.types import *
+from pyspark.sql.utils import AnalysisException, ParseException
+
+from iot_pipeline.config import QualityConfig, _Config
+from iot_pipeline.exceptions import DataQualityException, ZeroRowsDataFrameException
+from iot_pipeline.quality import (
+    backup_rescued_data,
+    calculate_clean,
+    enforce_quality_rules,
+    validate_milli_timestamp,
+    validate_positive_integer,
+    validate_three_char_str,
+    validate_two_char_str,
+)
+
+# testing happy validations
+
+
+@pytest.mark.integration
+def test_validate_three_char_str(spark_fixture):
+    columns = ["cca3"]
+
+    input_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+        {"cca2": "IT", "cca3": "ITALY", "c02_level": 1556, "timestamp": 1458444054120},
+    ]
+
+    output_data = [
+        {"cca2": "IT", "cca3": "ITALY", "c02_level": 1556, "timestamp": 1458444054120},
+    ]
+
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    input_df = spark_fixture.createDataFrame(input_data, schema=schema)
+    expected_df = spark_fixture.createDataFrame(output_data, schema=schema)
+
+    actual_df = validate_three_char_str(columns, input_df, schema.toDDL())
+
+    assert_df_equality(actual_df, expected_df)
+
+
+@pytest.mark.integration
+def test_validate_two_char_str(spark_fixture):
+    columns = ["cca2"]
+
+    input_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+        {"cca2": "ITALY", "cca3": "USA", "c02_level": 1556, "timestamp": 1458444054120},
+    ]
+
+    output_data = [
+        {"cca2": "ITALY", "cca3": "USA", "c02_level": 1556, "timestamp": 1458444054120},
+    ]
+
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    input_df = spark_fixture.createDataFrame(input_data, schema=schema)
+    expected_df = spark_fixture.createDataFrame(output_data, schema=schema)
+
+    actual_df = validate_two_char_str(columns, input_df, schema.toDDL())
+
+    assert_df_equality(actual_df, expected_df)
+
+
+@pytest.mark.integration
+def test_validate_positive_integer(spark_fixture):
+    columns = ["c02_level"]
+
+    input_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": -1, "timestamp": 1458444054120},
+    ]
+
+    output_data = [
+        {"cca2": "IT", "cca3": "ITA", "c02_level": -1, "timestamp": 1458444054120},
+    ]
+
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    input_df = spark_fixture.createDataFrame(input_data, schema=schema)
+    expected_df = spark_fixture.createDataFrame(output_data, schema=schema)
+
+    actual_df = validate_positive_integer(columns, input_df, schema.toDDL())
+
+    assert_df_equality(actual_df, expected_df)
+
+
+@pytest.mark.integration
+def test_validate_milli_timestamp(spark_fixture):
+    columns = ["timestamp"]
+
+    input_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 10},
+    ]
+
+    output_data = [
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 10},
+    ]
+
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    input_df = spark_fixture.createDataFrame(input_data, schema=schema)
+    expected_df = spark_fixture.createDataFrame(output_data, schema=schema)
+
+    actual_df = validate_milli_timestamp(columns, input_df, schema.toDDL())
+
+    assert_df_equality(actual_df, expected_df)
+
+
+@pytest.mark.integration
+def test_calculate_clean_happy_path(spark_fixture):
+
+    raw_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 14584440541190},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 14584440541190},
+    ]
+
+    clean_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+    ]
+
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    df = spark_fixture.createDataFrame(raw_data, schema=schema)
+    clean_df = spark_fixture.createDataFrame(clean_data, schema=schema)
+    assert calculate_clean(df, clean_df) == 50
+
+
+@pytest.mark.integration
+def test_calculate_clean_exception(spark_fixture):
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    df = spark_fixture.emptyDataFrame(schema)
+    with pytest.raises(ZeroRowsDataFrameException):
+        calculate_clean(df, df)
+
+
+@pytest.mark.integration
+def test_backup_rescued_data_happy_path(spark_fixture):
+    raw_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 14584440541190},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 14584440541190},
+    ]
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    df = spark_fixture.createDataFrame(raw_data, schema)
+    with TemporaryDirectory(dir="tests") as tmp:
+        backup_rescued_data(df, tmp, "col")
+        assert (Path(tmp) / "col.csv").exists()
+        actual = spark_fixture.read.csv(
+            str(Path(tmp) / "col.csv"), header=True, schema=schema
+        )
+        assert_df_equality(actual, df, ignore_nullable=True)
+
+
+@pytest.mark.integration
+def test_backup_rescued_data_analysis_parse_exception(spark_fixture):
+    raw_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 14584440541190},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 14584440541190},
+    ]
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    df = spark_fixture.createDataFrame(raw_data, schema)
+    with pytest.raises((AnalysisException, ParseException)):
+        input = df.select("None_existing_col")
+        backup_rescued_data(input, "", "")
+
+
+def test_backup_rescued_data_java_error():
+
+    mock_writer = MagicMock()
+    mock_writer.csv.side_effect = FakePy4JJavaError
+    mock_df = MagicMock()
+    mock_df.write = mock_writer
+
+    with pytest.raises(Py4JJavaError):
+        backup_rescued_data(mock_df, "", "")
+
+
+@pytest.mark.integration
+def test_enforce_quality_rules_data_quality_exception(spark_fixture):
+    config = QualityConfig(
+        _Config(
+            {
+                "EXTRACT_SCHEMA": "cca2 STRING, cca3 STRING, c02_level INT, timestamp LONG",
+                "DIRTY_DATA_THRESHOLD_PCT": -10,
+            }
+        )
+    )
+    raw_data = [
+        {"cca2": "US", "cca3": "USA", "c02_level": 868, "timestamp": 1458444054093},
+        {"cca2": "NO", "cca3": "NOR", "c02_level": 1473, "timestamp": 1458444054119},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 14584440541190},
+        {"cca2": "IT", "cca3": "ITA", "c02_level": 1556, "timestamp": 14584440541190},
+    ]
+    schema = StructType(
+        [
+            StructField("cca2", StringType(), True),
+            StructField("cca3", StringType(), True),
+            StructField("c02_level", IntegerType(), True),
+            StructField("timestamp", LongType(), True),
+        ]
+    )
+
+    df = spark_fixture.createDataFrame(raw_data, schema)
+    with pytest.raises(DataQualityException):
+        enforce_quality_rules(df, config)
+[DIR]  ./logs
+[DIR]  ./scripts
+--- ./scripts/run.sh ---
+#!/bin/bash
+set -e
+
+echo "Running pyspark..."
+uv run iot_pipeline yaml/dev.yaml--- ./LICENSE ---
+MIT License
+
+Copyright (c) [year] [fullname]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+[DIR]  ./yaml
+--- ./yaml/prod.yaml ---
+# Logs
+LOGLEVEL: "INFO"
+LOGFILE: "logs/pipeline.log"
+
+# Filesystem
+INPUTDATAPATH: "data/iot_devices.json"
+OUTPUTFOLDERPATH: "data/output"
+
+
+#Business decisions
+DIRTY_DATA_THRESHOLD_PCT: 10
+THREE_CHAR_STR: 
+    - "cca3"
+TWO_CHAR_STR:
+    - "cca2"
+POSITIVE_INTEGER:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+MILLI_TIMESTAMP:
+    - timestamp
+DROP_ON_NULL:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+    - timestamp
+
+
+# DDL
+EXTRACT_SCHEMA: "device_id INT, device_name STRING, ip STRING, cca2 STRING, cca3 STRING, cn STRING, latitude DECIMAL(7,3), longitude DECIMAL(7,3), scale STRING, temp INT, humidity INT, battery_level INT, c02_level INT, lcd STRING, timestamp LONG"
+
+# --- Spark & Optimisations
+APPNAME: "IoT Pipeline"
+SPARK_MASTER: "local[2]"
+SPARK_SQL_SHUFFLE_PARTITIONS: 4
+SPARK_MEMORY_FRACTION: 0.5
+SPARK_DRIVER_MEMORY: 2g
+SPARK_SQL_SESSION_TIMEZONE: UTC
+SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE: dynamic
+SPARK_SERIALIZER: org.apache.spark.serializer.KryoSerializer
+SPARK_SQL_PARQUET_COMPRESSION_CODEC: zstd
+SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: _rescued_data
+CHECK_EXECUTION_PLAN: True--- ./yaml/dev.yaml ---
+# Logs
+LOGLEVEL: "INFO"
+LOGFILE: "logs/pipeline.log"
+
+# Filesystem
+INPUTDATAPATH: "data/iot_devices.json"
+OUTPUTFOLDERPATH: "data/output"
+
+
+#Business decisions
+DIRTY_DATA_THRESHOLD_PCT: 10
+THREE_CHAR_STR: 
+    - "cca3"
+TWO_CHAR_STR:
+    - "cca2"
+POSITIVE_INTEGER:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+MILLI_TIMESTAMP:
+    - timestamp
+DROP_ON_NULL:
+    - "c02_level"
+    - "battery_level"
+    - humidity
+    - temp
+    - device_id
+    - timestamp
+
+
+# DDL
+EXTRACT_SCHEMA: "device_id INT, device_name STRING, ip STRING, cca2 STRING, cca3 STRING, cn STRING, latitude DECIMAL(7,3), longitude DECIMAL(7,3), scale STRING, temp INT, humidity INT, battery_level INT, c02_level INT, lcd STRING, timestamp LONG"
+
+# --- Spark & Optimisations
+APPNAME: "IoT Pipeline"
+SPARK_MASTER: "local[2]"
+SPARK_SQL_SHUFFLE_PARTITIONS: 4
+SPARK_MEMORY_FRACTION: 0.5
+SPARK_DRIVER_MEMORY: 2g
+SPARK_SQL_SESSION_TIMEZONE: UTC
+SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE: dynamic
+SPARK_SERIALIZER: org.apache.spark.serializer.KryoSerializer
+SPARK_SQL_PARQUET_COMPRESSION_CODEC: zstd
+SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: _rescued_data
+CHECK_EXECUTION_PLAN: True[DIR]  ./iot_pipeline
+--- ./iot_pipeline/config.py ---
+import warnings
+from pathlib import Path
+
+import yaml
+from iot_pipeline.exceptions import (
+    ConfigurationImmutabilityRule,
+    ConfigurationValidationException,
+    ConfigurationValidationWarning,
+    MissingConfigurationKeyNoReasonableDefaultException,
+)
+
+
+class _FrozenConfig:
+    def __setattr__(self, name, value):
+        if getattr(self, "_frozen", False):
+            raise ConfigurationImmutabilityRule(
+                f"You are not allowed to edit instance attributes of a config class - {name} is read-only after init"
+            )
+        super().__setattr__(name, value)
+
+
+class _Config(_FrozenConfig):
+    def __init__(self, _config):
+        self.LOGLEVEL = _config.get("LOGLEVEL", "WARNING")
+        self.LOGFILE = _config.get("LOGFILE", "logs/pipeline.log")
+        self.APPNAME = _config.get("APPNAME", "IoT Pipeline")
+        self.INPUTDATAPATH = _config.get("INPUTDATAPATH", "data/iot_devices.json")
+        self.OUTPUTFOLDERPATH = _config.get("OUTPUTFOLDERPATH", "data/output")
+        self.EXTRACT_SCHEMA = _config["EXTRACT_SCHEMA"]  # required, no sane default
+        self.SPARK_MASTER = _config.get("SPARK_MASTER", "local[*]")
+        self.SPARK_SQL_SHUFFLE_PARTITIONS = _config.get(
+            "SPARK_SQL_SHUFFLE_PARTITIONS", 8
+        )
+        self.SPARK_SQL_SESSION_TIMEZONE = _config.get(
+            "SPARK_SQL_SESSION_TIMEZONE", "UTC"
+        )
+        self.SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE = _config.get(
+            "SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE", "dynamic"
+        )
+        self.SPARK_SERIALIZER = _config.get(
+            "SPARK_SERIALIZER", "org.apache.spark.serializer.KryoSerializer"
+        )
+        self.SPARK_SQL_PARQUET_COMPRESSION_CODEC = _config.get(
+            "SPARK_SQL_PARQUET_COMPRESSION_CODEC", "zstd"
+        )
+        self.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD = _config.get(
+            "SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD", "_rescued_data"
+        )
+        self.DIRTY_DATA_THRESHOLD_PCT = _config.get("DIRTY_DATA_THRESHOLD_PCT", 10)
+        self.THREE_CHAR_STR = _config.get("THREE_CHAR_STR", [])
+        self.TWO_CHAR_STR = _config.get("TWO_CHAR_STR", [])
+        self.POSITIVE_INTEGER = _config.get(
+            "POSITIVE_INTEGER",
+            [],
+        )
+        self.MILLI_TIMESTAMP = _config.get("MILLI_TIMESTAMP", [])
+        self.CHECK_EXECUTION_PLAN = _config.get("CHECK_EXECUTION_PLAN", False)
+        self.DROP_ON_NULL = _config.get("DROP_ON_NULL", [])
+        self.SPARK_MEMORY_FRACTION = _config.get("SPARK_MEMORY_FRACTION", 0.6)
+        self.SPARK_DRIVER_MEMORY = _config.get("SPARK_DRIVER_MEMORY", "1g")
+
+        self._frozen = True
+
+
+# Bloated function signatures config classes
+
+
+class SessionConfig(_FrozenConfig):
+    def __init__(self, config: _Config):
+        self.APPNAME = config.APPNAME
+        self.SPARK_MASTER = config.SPARK_MASTER
+        self.SPARK_SQL_SHUFFLE_PARTITIONS = config.SPARK_SQL_SHUFFLE_PARTITIONS
+        self.SPARK_SQL_SESSION_TIMEZONE = config.SPARK_SQL_SESSION_TIMEZONE
+        self.SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE = (
+            config.SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE
+        )
+        self.SPARK_SERIALIZER = config.SPARK_SERIALIZER
+        self.SPARK_SQL_PARQUET_COMPRESSION_CODEC = (
+            config.SPARK_SQL_PARQUET_COMPRESSION_CODEC
+        )
+        self.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD = (
+            config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD
+        )
+        self.SPARK_MEMORY_FRACTION = config.SPARK_MEMORY_FRACTION
+
+        self._frozen = True
+
+
+class CleanConfig(_FrozenConfig):
+    def __init__(self, config: _Config):
+        self.DROP_ON_NULL = config.DROP_ON_NULL
+        self._frozen = True
+
+
+class QualityConfig(_FrozenConfig):
+    def __init__(self, config: _Config):
+        self.DIRTY_DATA_THRESHOLD_PCT = config.DIRTY_DATA_THRESHOLD_PCT
+        self.THREE_CHAR_STR = config.THREE_CHAR_STR
+        self.TWO_CHAR_STR = config.TWO_CHAR_STR
+        self.POSITIVE_INTEGER = config.POSITIVE_INTEGER
+        self.MILLI_TIMESTAMP = config.MILLI_TIMESTAMP
+        self.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD = (
+            config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD
+        )
+        self.EXTRACT_SCHEMA = config.EXTRACT_SCHEMA
+        self.OUTPUTFOLDERPATH = config.OUTPUTFOLDERPATH
+
+        self._frozen = True
+
+
+def get_config(path: str):
+    with open(path) as f:
+        _config = yaml.safe_load(f)
+    try:
+        config = _Config(_config)
+        return validate_config(config)
+    except KeyError:
+        raise MissingConfigurationKeyNoReasonableDefaultException(
+            "Could'nt make a default for missing config key - Some culprits are EXTRACT_SCHEMA"
+        )
+    except ConfigurationValidationException:
+        raise
+    except Exception:
+        raise
+
+
+def validate_config(config: _Config) -> _Config:
+    # must be one of the following
+    if config.LOGLEVEL not in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
+        raise ConfigurationValidationException(
+            f"'LOGLEVEL' is not set to a reasonable value - set it to either DEBUG, INFO, WARNING, ERROR, and CRITICAL - It is currently set to {config.LOGLEVEL}"
+        )
+
+    # must be a str and an existing path and a file
+    if (
+        (not isinstance(config.LOGFILE, str))
+        or (not Path(config.LOGFILE).parent.exists())
+        or (not Path(config.LOGFILE).parent.is_dir())
+    ):
+        raise ConfigurationValidationException(
+            f"LOGFILE is either not a string, or the folder does not exist or its parent is not a folder - look at it for yourself {config.LOGFILE}"
+        )
+
+    # must exist and either be a .json/.jsonl/.csv file
+    if (
+        (not isinstance(config.INPUTDATAPATH, str))
+        or (not Path(config.INPUTDATAPATH).exists())
+        or (not Path(config.INPUTDATAPATH).is_file())
+        or (not Path(config.INPUTDATAPATH).suffix in [".json", ".jsonl", ".csv"])
+    ):
+        raise ConfigurationValidationException(
+            f"INPUTDATAPATH is either not a string, an existing path, a file or a .json/.jsonl/.csv - take a look {config.INPUTDATAPATH}"
+        )
+
+    # must be a str and an existing path and a foler
+    if (
+        (not isinstance(config.OUTPUTFOLDERPATH, str))
+        or (not Path(config.OUTPUTFOLDERPATH).exists())
+        or (not Path(config.OUTPUTFOLDERPATH).is_dir())
+    ):
+        raise ConfigurationValidationException(
+            f"OUTPUTFOLDERPATH is either not a string, existing path or a folder: {config.OUTPUTFOLDERPATH}"
+        )
+
+    # must be a positive double and less than 100
+    if (
+        (not isinstance(config.DIRTY_DATA_THRESHOLD_PCT, (int, float)))
+        or (config.DIRTY_DATA_THRESHOLD_PCT < 0)
+        or (config.DIRTY_DATA_THRESHOLD_PCT > 100)
+    ):
+        raise ConfigurationValidationException(
+            f"DIRTY_DATA_THRESHOLD_PCT is either not an number, is negative or is above 100: {config.DIRTY_DATA_THRESHOLD_PCT}"
+        )
+
+    # must be a list of strings but just warns if the list is empty
+    business_decisions = [
+        config.THREE_CHAR_STR,
+        config.TWO_CHAR_STR,
+        config.POSITIVE_INTEGER,
+        config.MILLI_TIMESTAMP,
+        config.DROP_ON_NULL,
+    ]
+    business_decisions_validations = [
+        (not is_seq_of_str(x)) for x in business_decisions
+    ]
+    if True in business_decisions_validations:
+        raise ConfigurationValidationException(
+            "One of the business decisions config is not a sequence of strings - check THREE_CHAR_STR, TWO_CHAR_STR, POSITIVE_INTEGER, MILLI_TIMESTAMP, or DROP_ON_NULL"
+        )
+    business_decisions_validations = [
+        isinstance(x, (list, tuple)) and (len(x) == 0) for x in business_decisions
+    ]
+    if True in business_decisions_validations:
+        warnings.warn(
+            "One of the business decisions is an empty list - check THREE_CHAR_STR, TWO_CHAR_STR, POSITIVE_INTEGER, MILLI_TIMESTAMP, or DROP_ON_NULL",
+            ConfigurationValidationWarning,
+        )
+
+    # throughly testing the validity of a DDL string is beyond the scope of this project
+    # the assumption is that data almost always includes some kind of string especially business data or even in this case of IoT data, you need it for device names at least or something
+    # another assumption is that you have more than one column
+    if (
+        (not isinstance(config.EXTRACT_SCHEMA, str))
+        or (not "STRING" in config.EXTRACT_SCHEMA)
+        or (len(config.EXTRACT_SCHEMA.split(",")) == 1)
+    ):
+        raise ConfigurationValidationException(
+            f"Invalid DDL string: {config.EXTRACT_SCHEMA}"
+        )
+
+    # string checks
+    if (
+        (not isinstance(config.APPNAME, str))
+        or (not isinstance(config.SPARK_MASTER, str))
+        or (not isinstance(config.SPARK_SQL_SESSION_TIMEZONE, str))
+        or (not isinstance(config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD, str))
+    ):
+        raise ConfigurationValidationException(
+            f"APPNAME, SPARK_MASTER, or SPARK_SQL_SESSION_TIMEZONE is not a string -  SPARK_MASTER: {config.SPARK_MASTER}, APPNAME: {config.APPNAME}, SPARK_SQL_SESSION_TIMEZONE: {config.SPARK_SQL_SESSION_TIMEZONE}, SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: {config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD}"
+        )
+
+    # a positive inteer beyween 1 and 10000
+    if (config.SPARK_SQL_SHUFFLE_PARTITIONS < 1) or (
+        config.SPARK_SQL_SHUFFLE_PARTITIONS > 10000
+    ):
+        raise ConfigurationValidationException(
+            f"SPARK_SQL_SHUFFLE_PARTITIONS is an unreasoonable number: {config.SPARK_SQL_SHUFFLE_PARTITIONS}"
+        )
+
+    # is either a string with value = dynamic or static
+    if (not isinstance(config.SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE, str)) or (
+        config.SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE.lower()
+        not in ["dynamic", "static"]
+    ):
+        raise ConfigurationValidationException(
+            f"Value for SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE is nonesense: {config.SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE}"
+        )
+
+    # is a member of serialisation options
+    serialisation_options = [
+        "org.apache.spark.serializer.DeserializationStream",
+        "org.apache.spark.serializer.DummySerializerInstance",
+        "org.apache.spark.serializer.JavaSerializer",
+        "org.apache.spark.serializer.KryoRegistrator",
+        "org.apache.spark.serializer.KryoSerializer",
+        "org.apache.spark.serializer.SerializationStream",
+        "org.apache.spark.serializer.Serializer",
+        "org.apache.spark.serializer.SerializerInstance",
+    ]
+    if config.SPARK_SERIALIZER not in serialisation_options:
+        raise ConfigurationValidationException(
+            f"SPARK_SERIALIZER is invalid: {config.SPARK_SERIALIZER} \ncheck https://spark.apache.org/docs/latest/configuration.html "
+        )
+
+    # is a member of codec options
+    codec_options = [
+        "none",
+        "uncompressed",
+        "snappy",
+        "gzip",
+        "lzo",
+        "brotli",
+        "lz4",
+        "lz4_raw",
+        "zstd",
+    ]
+    if config.SPARK_SQL_PARQUET_COMPRESSION_CODEC not in codec_options:
+        raise ConfigurationValidationException(
+            f"SPARK_SQL_PARQUET_COMPRESSION_CODEC is invalid: {config.SPARK_SQL_PARQUET_COMPRESSION_CODEC} \ncheck https://spark.apache.org/docs/latest/configuration.html"
+        )
+
+    # check if theres a "k", "m", "g" or "t"
+    if (not isinstance(config.SPARK_DRIVER_MEMORY, str)) or (
+        config.SPARK_DRIVER_MEMORY[-1] not in ["k", "m", "g", "t"]
+    ):
+        raise ConfigurationValidationException(
+            f"SPARK_DRIVER_MEMORY is invalid: {config.SPARK_DRIVER_MEMORY}"
+        )
+
+    # [0.5, 0.7]
+    if (
+        (not isinstance(config.SPARK_MEMORY_FRACTION, float))
+        or (config.SPARK_MEMORY_FRACTION < 0.5)
+        or (config.SPARK_MEMORY_FRACTION > 0.7)
+    ):
+        raise ConfigurationValidationException(
+            f"SPARK_MEMORY_FRACTION is invalid: {config.SPARK_MEMORY_FRACTION} "
+        )
+
+    return config
+
+
+# helper functions
+
+
+def is_seq_of_str(value):
+    return isinstance(value, (list, tuple)) and all(isinstance(x, str) for x in value)
+--- ./iot_pipeline/quality.py ---
+from pathlib import Path
+
+from py4j.protocol import Py4JJavaError
+from pyspark.sql import DataFrame
+from pyspark.sql.functions import *
+from pyspark.sql.utils import AnalysisException, ParseException
+
+from iot_pipeline.config import QualityConfig
+from iot_pipeline.exceptions import DataQualityException, ZeroRowsDataFrameException
+from iot_pipeline.logs import get_logger
+
+logger = get_logger(__name__)
+
+
+def enforce_quality_rules(df: DataFrame, quality_config: QualityConfig):
+    logger.info("Running validations")
+
+    rescued_records_df = df.sparkSession.emptyDataFrame(quality_config.EXTRACT_SCHEMA)
+    if quality_config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD in df.columns:
+        rescued_records_df = df.filter(
+            col(quality_config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD).isNotNull()
+        )
+    rescued_records_df = rescued_records_df.union(
+        validate_three_char_str(
+            quality_config.THREE_CHAR_STR, df, quality_config.EXTRACT_SCHEMA
+        )
+    )
+    rescued_records_df = rescued_records_df.union(
+        validate_two_char_str(
+            quality_config.TWO_CHAR_STR, df, quality_config.EXTRACT_SCHEMA
+        )
+    )
+    rescued_records_df = rescued_records_df.union(
+        validate_positive_integer(
+            quality_config.POSITIVE_INTEGER, df, quality_config.EXTRACT_SCHEMA
+        )
+    )
+    rescued_records_df = rescued_records_df.union(
+        validate_milli_timestamp(
+            quality_config.MILLI_TIMESTAMP, df, quality_config.EXTRACT_SCHEMA
+        )
+    )
+
+    clean_df = df.subtract(rescued_records_df)
+    rescued_records_df = rescued_records_df.distinct()
+    clean_df = clean_df.drop(quality_config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD)
+
+    try:
+        pct_clean = calculate_clean(df, clean_df)
+    except ZeroRowsDataFrameException:
+        logger.exception("Empty bronze data!")
+        raise
+    if pct_clean < (100 - quality_config.DIRTY_DATA_THRESHOLD_PCT):
+        try:
+            backup_rescued_data(
+                rescued_records_df,
+                quality_config.OUTPUTFOLDERPATH,
+                quality_config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD,
+            )
+            raise DataQualityException(
+                f"There are too many bad rows - {100 - pct_clean}% of rows are dirty, and the threshold is {quality_config.DIRTY_DATA_THRESHOLD_PCT}%"
+            )
+        except DataQualityException:
+            logger.exception("")
+            raise
+        except Exception:
+            raise
+
+    return clean_df
+
+
+def calculate_clean(df: DataFrame, clean_df: DataFrame) -> float:
+    total = df.count()
+    if total == 0:
+        raise ZeroRowsDataFrameException("There's no rows in the raw DataFrame")
+    return (clean_df.count() / total) * 100
+
+
+def backup_rescued_data(
+    df: DataFrame, OUTPUTFOLDERPATH: str, SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD: str
+):
+    try:
+        logger.info("Backing up rescued data")
+        path = Path(OUTPUTFOLDERPATH) / (
+            SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD + ".csv"
+        )
+        df.write.csv(str(path), mode="overwrite", header=True)
+    except (AnalysisException, ParseException):
+        logger.exception(
+            "There is an issue with the transformations associated with the rescued data, check the query plan, column references and schema"
+        )
+        raise
+    except Py4JJavaError:
+        logger.exception(
+            "There was a java error when trying to write rescued data to disk"
+        )
+        raise
+    except Exception:
+        logger.exception(
+            "An unexpected error occurred while saving the rescued data to disk"
+        )
+        raise
+
+
+def validate_three_char_str(columns: list[str], df: DataFrame, EXTRACT_SCHEMA: str):
+    invalid_records_df = df.sparkSession.emptyDataFrame(EXTRACT_SCHEMA)
+    for columnName in columns:
+        invalid_records_df = invalid_records_df.union(
+            df.where(col(columnName).isNull() | (char_length(columnName) != lit(3)))
+        )
+    return invalid_records_df
+
+
+def validate_two_char_str(columns: list[str], df: DataFrame, EXTRACT_SCHEMA: str):
+    invalid_records_df = df.sparkSession.emptyDataFrame(EXTRACT_SCHEMA)
+    for columnName in columns:
+        invalid_records_df = invalid_records_df.union(
+            df.where(col(columnName).isNull() | (char_length(columnName) != lit(2)))
+        )
+    return invalid_records_df
+
+
+def validate_positive_integer(columns: list[str], df: DataFrame, EXTRACT_SCHEMA: str):
+    invalid_records_df = df.sparkSession.emptyDataFrame(EXTRACT_SCHEMA)
+    for columnName in columns:
+        invalid_records_df = invalid_records_df.union(
+            df.where(col(columnName).isNull() | (col(columnName) < 0))
+        )
+    return invalid_records_df
+
+
+def validate_milli_timestamp(columns: list[str], df: DataFrame, EXTRACT_SCHEMA: str):
+    invalid_records_df = df.sparkSession.emptyDataFrame(EXTRACT_SCHEMA)
+    for columnName in columns:
+        # the true birth of commercial internet-connected devices is pinned to 1990 i.e. 631152000000 source: https://www.fia.uk.com/news/history-of-iot.html
+        invalid_records_df = invalid_records_df.union(
+            df.where(
+                col(columnName).isNull()
+                | (col(columnName) < 631152000000)
+                | (col(columnName) > 10000000000000)
+            )
+        )
+    return invalid_records_df
+--- ./iot_pipeline/analysis.py ---
+from pyspark.sql import DataFrame
+from pyspark.sql.functions import *
+
+from iot_pipeline.logs import get_logger
+
+logger = get_logger(__name__)
+
+
+def devices_per_country(df: DataFrame) -> DataFrame:
+    return df.groupBy(col("cn")).agg(count("*").alias("total_number_of_devices"))
+--- ./iot_pipeline/etl.py ---
+from pathlib import Path
+
+from py4j.protocol import Py4JJavaError
+from pyspark.sql import DataFrame, SparkSession
+from pyspark.sql.functions import *
+from pyspark.sql.utils import AnalysisException, ParseException
+
+from iot_pipeline.config import CleanConfig
+from iot_pipeline.logs import get_logger
+
+logger = get_logger(__name__)
+
+
+def extract(spark: SparkSession, INPUTDATAPATH: str, EXTRACT_SCHEMA: str) -> DataFrame:
+    logger.info(f"Extracting '{INPUTDATAPATH}'")
+    ext = Path(INPUTDATAPATH).suffix
+    try:
+        if ext == ".json" or ext == ".jsonl":
+            return (
+                spark.read.format("json")
+                .schema(EXTRACT_SCHEMA)
+                .option("mode", "PERMISSIVE")
+                .load(INPUTDATAPATH)
+            )
+        elif ext == ".csv":
+            return (
+                spark.read.format("csv")
+                .schema(EXTRACT_SCHEMA)
+                .option("mode", "PERMISSIVE")
+                .option("header", True)
+                .load(INPUTDATAPATH)
+            )
+    except AnalysisException:
+        logger.exception(f"There was an issue parsing the DDL string: {EXTRACT_SCHEMA}")
+        raise
+    except Py4JJavaError:
+        logger.exception(
+            f"JVM-side exception has occurred when trying to load: {INPUTDATAPATH}"
+        )
+        raise
+    except Exception:
+        logger.error(
+            f"An unknown error has occured while extracting {INPUTDATAPATH} with {EXTRACT_SCHEMA}"
+        )
+        raise
+
+
+def clean(df: DataFrame, clean_config: CleanConfig) -> DataFrame:
+    logger.info("Cleaning data")
+    clean_df = df.na.drop(subset=clean_config.DROP_ON_NULL)
+    return clean_df
+
+
+# writing to disk
+
+
+def save_bronze(df: DataFrame, INPUTDATAPATH: str, OUTPUTFOLDERPATH: str):
+    path = Path(OUTPUTFOLDERPATH) / "bronze" / (Path(INPUTDATAPATH).stem + ".delta")
+    try:
+        logger.info(f"Saving {df.count()} bronze rows to disk")
+        df.write.format("delta").mode("overwrite").save(str(path))
+    except (AnalysisException, ParseException):
+        logger.exception(
+            "There is an issue with the transformations associated with the bronze data, check the query plan, column references and schema"
+        )
+        raise
+    except Py4JJavaError:
+        logger.exception(
+            "There was a java error when trying to write bronze data to disk"
+        )
+        raise
+    except Exception:
+        logger.exception(
+            "An unexpected error occurred while saving the bronze data to disk"
+        )
+        raise
+
+
+def save_silver(df: DataFrame, INPUTDATAPATH: str, OUTPUTFOLDERPATH: str):
+    path = Path(OUTPUTFOLDERPATH) / "silver" / (Path(INPUTDATAPATH).stem + ".delta")
+    try:
+        logger.info(f"Saving {df.count()} silver rows to disk")
+        df.write.format("delta").mode("overwrite").save(str(path))
+    except (AnalysisException, ParseException):
+        logger.exception(
+            "There is an issue with the transformations associated with the silver data, check the query plan, column references and schema"
+        )
+        raise
+    except Py4JJavaError:
+        logger.exception(
+            "There was a java error when trying to write silver data to disk"
+        )
+        raise
+    except Exception:
+        logger.exception(
+            "An unexpected error occurred while saving the silver data to disk"
+        )
+        raise
+
+
+def save_gold(
+    analysis_df: DataFrame,
+    raw_df: DataFrame,
+    quality_df: DataFrame,
+    OUTPUTFOLDERPATH: str,
+    analysis: str,
+) -> None:
+    try:
+        logger.info(f"Loaded {raw_df.count()} rows from disk")
+        logger.info(f"Kept {quality_df.count()} rows after cleaning")
+        logger.info(f"Saving {analysis_df.count()} gold rows to disk")
+        path = Path(OUTPUTFOLDERPATH) / "gold" / (analysis + ".delta")
+        analysis_df.write.format("delta").mode("overwrite").save(str(path))
+    except (AnalysisException, ParseException):
+        logger.exception(
+            "There is an issue with the transformations associated with the gold data, check the query plan, column references and schema"
+        )
+        raise
+    except Py4JJavaError:
+        logger.exception(
+            "There was a java error when trying to write gold data to disk"
+        )
+        raise
+    except Exception:
+        logger.exception(
+            "An unexpected error occurred while saving the gold data to disk"
+        )
+        raise
+--- ./iot_pipeline/__init__.py ---
+--- ./iot_pipeline/pipeline.py ---
+from pyspark.sql import SparkSession
+
+from iot_pipeline.analysis import devices_per_country
+from iot_pipeline.config import (
+    CleanConfig,
+    QualityConfig,
+    _Config,
+)
+from iot_pipeline.etl import clean, extract, save_bronze, save_gold, save_silver
+from iot_pipeline.logs import get_logger
+from iot_pipeline.quality import enforce_quality_rules
+
+logger = get_logger(__name__)
+
+
+def run_pipeline(spark: SparkSession, config: _Config):
+
+    # ET of the ETL
+    df = extract(spark, config.INPUTDATAPATH, config.EXTRACT_SCHEMA).cache()
+
+    save_bronze(df, config.INPUTDATAPATH, config.OUTPUTFOLDERPATH)
+
+    quality_df = enforce_quality_rules(df, QualityConfig(config))
+    quality_df = clean(quality_df, CleanConfig(config)).cache()
+    save_silver(quality_df, config.INPUTDATAPATH, config.OUTPUTFOLDERPATH)
+
+    # Analysis and Saving to disk
+    analysis_df = devices_per_country(quality_df)
+    if not config.CHECK_EXECUTION_PLAN:
+        save_gold(
+            analysis_df,
+            raw_df=df,
+            quality_df=quality_df,
+            OUTPUTFOLDERPATH=config.OUTPUTFOLDERPATH,
+            analysis="devices_per_country",
+        )
+    else:
+        analysis_df.explain()
+
+    return spark
+--- ./iot_pipeline/logs.py ---
+import logging
+
+
+def setup_logging(LOGLEVEL: str, LOGFILE: str):
+    """
+    Configure the root logger with console and file handlers.
+    Call this once at application startup.
+    """
+    # Prevent duplicate handlers if called twice (e.g., during hot reload)
+    root = logging.getLogger()
+    while root.handlers:
+        h = root.handlers.pop()
+        h.close()
+
+    logging.basicConfig(
+        level=getattr(logging, LOGLEVEL),
+        filename=LOGFILE,
+        format="%(asctime)s - %(levelname)s - %(name)s - %(funcName)s() - %(message)s",
+    )
+
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(getattr(logging, LOGLEVEL))
+    console_handler.setFormatter(
+        logging.Formatter(
+            "%(asctime)s - %(levelname)s - %(name)s - %(funcName)s() - %(message)s"
+        )
+    )
+    logging.getLogger().addHandler(console_handler)
+
+
+def get_logger(name: str):
+    return logging.getLogger(name)
+--- ./iot_pipeline/main.py ---
+import os
+import sys
+from pathlib import Path
+
+from iot_pipeline.config import SessionConfig, get_config
+from iot_pipeline.logs import get_logger, setup_logging
+from iot_pipeline.pipeline import run_pipeline
+from iot_pipeline.session import get_session
+
+logger = get_logger(__name__)
+
+
+def main():
+    if len(sys.argv) < 2:
+        raise RuntimeError("Usage: script <path-to-configuration-yaml>")
+    elif not Path(sys.argv[1]).exists() or Path(sys.argv[1]).suffix != ".yaml":
+        raise RuntimeError(
+            "You need to pass an existing '.yaml' file as configuration"
+        )
+
+    config = get_config(sys.argv[1])
+    os.environ["PYSPARK_SUBMIT_ARGS"] = (
+        f"--driver-memory {config.SPARK_DRIVER_MEMORY} pyspark-shell"
+    )
+
+    setup_logging(config.LOGLEVEL, config.LOGFILE)
+
+    spark = get_session(SessionConfig(config))
+    spark = run_pipeline(spark, config)
+    spark.stop()
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+--- ./iot_pipeline/session.py ---
+from delta import configure_spark_with_delta_pip
+from pyspark.sql import SparkSession
+
+from iot_pipeline.config import SessionConfig
+from iot_pipeline.logs import get_logger
+
+logger = get_logger(__name__)
+
+
+def get_session(session_config: SessionConfig):
+    logger.info("Building spark session...")
+    spark = (
+        SparkSession.builder.master(session_config.SPARK_MASTER)
+        .appName(session_config.APPNAME)
+        .config(
+            "spark.sql.shuffle.partitions", session_config.SPARK_SQL_SHUFFLE_PARTITIONS
+        )
+        .config("spark.sql.session.timeZone", session_config.SPARK_SQL_SESSION_TIMEZONE)
+        .config(
+            "spark.sql.sources.partitionOverwriteMode",
+            session_config.SPARK_SQL_SOURCES_PARTITION_OVERWRITE_MODE,
+        )
+        .config("spark.serializer", session_config.SPARK_SERIALIZER)
+        .config(
+            "spark.sql.parquet.compression.codec",
+            session_config.SPARK_SQL_PARQUET_COMPRESSION_CODEC,
+        )
+        .config(
+            "spark.sql.columnNameOfCorruptRecord",
+            session_config.SPARK_SQL_COLUMN_NAME_OF_CORRUPT_RECORD,
+        )
+        .config("spark.memory.fraction", session_config.SPARK_MEMORY_FRACTION)
+        # these two aren't really optional and they are required for using delta
+        .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
+        .config(
+            "spark.sql.catalog.spark_catalog",
+            "org.apache.spark.sql.delta.catalog.DeltaCatalog",
+        )
+    )
+
+    return configure_spark_with_delta_pip(spark).getOrCreate()
+--- ./iot_pipeline/exceptions.py ---
+class ConfigurationValidationException(RuntimeError):
+    """Raised when a configuration value is invalid."""
+
+
+class DataQualityException(RuntimeError):
+    """Raised when there is a data quality issue, like too many nulls"""
+
+
+class ConfigurationImmutabilityRule(RuntimeError):
+    """Raised when someone attempts to modify the the attributes of an instance of a config class"""
+
+
+# this one isnt an exception, but i was already calling this file exceptions by the time i realised i needed it, so...
+
+
+class ConfigurationValidationWarning(UserWarning):
+    """Raised when someone attempts to use a valid configuration that is sus"""
+
+
+class MissingConfigurationKeyNoReasonableDefaultException(RuntimeError):
+    """Raised when there is a missing key in the config yaml that doesnt have a reasonable default. Something like EXTRACT_SCHEMA"""
+
+
+class ZeroRowsDataFrameException(RuntimeError):
+    """Raised when the count method of a DataFrame returns zero"""
+--- ./iot_pipeline/__main__.py ---
+from iot_pipeline.main import main
+
+if __name__ == "__main__":
+    main()
