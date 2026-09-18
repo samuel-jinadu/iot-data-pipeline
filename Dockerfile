@@ -19,7 +19,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 COPY . .
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked \
-    && mkdir -p logs
+    # && mkdir -p logs 
 
 
 # ---- Prod stage ----

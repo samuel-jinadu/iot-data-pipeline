@@ -1,10 +1,10 @@
 # Logs
 LOGLEVEL: "INFO"
-LOGFILE: "logs/pipeline.log"
+LOGFILE: "tests/pipeline.log"
 
 # Filesystem
-INPUTDATAPATH: "data/iot_devices.json"
-OUTPUTFOLDERPATH: "data/output"
+INPUTDATAPATH: "tests/fixtures/test-happy.json"
+OUTPUTFOLDERPATH: "tests"
 
 
 #Business decisions
