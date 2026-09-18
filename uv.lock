@@ -210,12 +210,10 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "black" },
-    { name = "ruff" },
-]
-test = [
     { name = "chispa" },
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "ruff" },
 ]
 
 [package.metadata]
@@ -228,13 +226,12 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "black", specifier = ">=26.5.1" },
-    { name = "ruff", specifier = ">=0.16.8" },
-]
-test = [
     { name = "chispa", specifier = ">=0.12.0" },
     { name = "pytest", specifier = ">=9.1.1" },
     { name = "pytest-cov", specifier = ">=7.1.0" },
+    { name = "ruff", specifier = ">=0.16.8" },
 ]
+test = []
 
 [[package]]
 name = "mypy-extensions"
