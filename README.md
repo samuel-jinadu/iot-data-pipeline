@@ -1,5 +1,9 @@
 # IoT Data Pipeline
 
+[![CI](https://github.com/samuel-jinadu/iot-data-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/samuel-jinadu/iot-data-pipeline/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.12+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
 A production-ready PySpark data pipeline for processing IoT device telemetry data. Built with a medallion architecture (bronze/silver/gold), comprehensive data quality validation, and Delta Lake storage.
 
 ## Features
