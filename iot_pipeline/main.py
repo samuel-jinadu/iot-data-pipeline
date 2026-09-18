@@ -14,9 +14,7 @@ def main():
     if len(sys.argv) < 2:
         raise RuntimeError("Usage: script <path-to-configuration-yaml>")
     elif not Path(sys.argv[1]).exists() or Path(sys.argv[1]).suffix != ".yaml":
-        raise RuntimeError(
-            "You need to pass an existing '.yaml' file as configuration"
-        )
+        raise RuntimeError("You need to pass an existing '.yaml' file as configuration")
 
     config = get_config(sys.argv[1])
     os.environ["PYSPARK_SUBMIT_ARGS"] = (
