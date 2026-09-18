@@ -59,6 +59,7 @@ logs/*
 !logs/.gitkeep
 *.log
 *.log.*
+data/
 
 # Test temporary directories created by tests
 tests/tmp*/
